@@ -84,7 +84,12 @@ calculated_dose = weight_kg * med_dosage
 st.write(f"Dose: {round(calculated_dose, 2)} mg")
 
 
-medication_options = pd.read_csv("medication-options.csv")
+@st.experimental_memo
+def read_csv(file):
+    return pd.read_csv(file)
+
+
+medication_options = read_csv("medication-options.csv")
 
 
 def instruction_text(row):
