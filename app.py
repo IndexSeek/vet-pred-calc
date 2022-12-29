@@ -16,7 +16,7 @@ selected_species = species.split(" ")[0].lower()
 st.write("Please enter the patient's weight.")
 weight_col, unit_col = st.columns(2)
 with weight_col:
-    weight = st.number_input("Weight", min_value=0, max_value=100, value=0, step=1)
+    weight = st.number_input("Weight", min_value=0, max_value=250, value=0, step=1)
 with unit_col:
     unit = st.selectbox("Unit", ("lb", "kg"))
 
